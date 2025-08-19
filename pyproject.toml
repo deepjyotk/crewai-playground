@@ -1,0 +1,31 @@
+[project]
+name = "crewai-sample"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "crewai[tools]>=0.157.0",
+    "crewai-tools==0.62.0",
+    "duckduckgo-search>=8.1.1",
+    "langchain-community>=0.3.27",
+    "langfuse>=3.2.7",
+    "litellm>=1.74.9",
+    "openai>=1.99.9",
+    "openinference-instrumentation-crewai>=0.1.11",
+    "openinference-instrumentation-litellm>=0.1.24",
+    "python-dotenv>=1.0.1",
+]
+
+[project.scripts]
+crewai-sample = "crewai_sample.crew_app:cli"
+
+[tool.uv]
+package = true
+
+[build-system]
+requires = ["hatchling>=1.25.0"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/crewai_sample"]

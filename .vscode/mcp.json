@@ -1,0 +1,13 @@
+{
+	"servers": {
+		"my-mcp-server-a445bacd": {
+			"url": "http://127.0.0.1:9000/mcp/",
+			"type": "http",
+			  "headers": {
+        "X-User-Id": "sample-user-123",
+        "X-Scopes": "portfolio:read,portfolio:trade"
+      }
+		}
+	},
+	"inputs": []
+}
